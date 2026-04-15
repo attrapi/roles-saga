@@ -294,7 +294,7 @@ function renderFilters() {
     btn.className = "filter-btn" + (activeCat === f.key ? " active" : "");
     const c = cats[f.key];
     if (c) { btn.style.background = c.bg; btn.style.color = c.fg; btn.style.borderColor = c.border; }
-    if (activeCat === f.key && c) { btn.style.fontWeight = "700"; btn.style.boxShadow = "0 0 0 2px " + c.border; }
+    if (activeCat === f.key && c) { btn.style.fontWeight = "700"; }
     else if (activeCat === f.key) { btn.style.background = "#0C447C"; btn.style.color = "white"; btn.style.borderColor = "#0C447C"; }
     btn.onclick = () => {
       activeCat = f.key;
