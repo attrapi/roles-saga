@@ -33,7 +33,7 @@
   .pill-footer:hover { background: var(--primary); color: white; border-color: var(--primary); }
   .reminder { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
   .reminder-pill { display: inline-flex; align-items: center; gap: 6px; background: #FFF8E1; color: #6B4408; border: 1px solid #F4D58A; padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 500; text-decoration: none; transition: all 0.15s; }
-  .reminder-pill:hover { background: #F4D58A; color: #412402; }
+  .reminder-pill:hover { filter: brightness(0.9); }
   .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-bottom: 1.5rem; }
   .stat { background: var(--surface); border-radius: 8px; padding: 1rem 1.25rem; border: 1px solid var(--border); }
   .stat-label { font-size: 12px; color: var(--text-sec); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
@@ -112,9 +112,9 @@
   </header>
 
   <div class="reminder">
-    <a class="reminder-pill" href="https://attrapi.github.io/Archivo-Institucional-actualizado/" target="_blank" rel="noopener">📁 Abrir Archivo institucional →</a>
-    <a class="reminder-pill" href="Guia_Operativa_SAGA_Completa.pdf" target="_blank" rel="noopener">📋 Guía Operativa SAGA →</a>
-    <a class="reminder-pill" href="https://attrapi.github.io/Archivo-Institucional-actualizado/" target="_blank" rel="noopener">🏛️ Administración →</a>
+    <a class="reminder-pill" style="background:#E6F1FB; color:#042C53; border-color:#378ADD;" href="https://attrapi.github.io/Archivo-Institucional-actualizado/" target="_blank" rel="noopener">📁 Abrir Archivo institucional →</a>
+    <a class="reminder-pill" style="background:#EEEDFE; color:#26215C; border-color:#7F77DD;" href="Guia_Operativa_SAGA_Completa.pdf" target="_blank" rel="noopener">📋 Guía Operativa SAGA →</a>
+    <a class="reminder-pill" style="background:#F1EFE8; color:#2C2C2A; border-color:#888780;" href="https://attrapi.github.io/Archivo-Institucional-actualizado/" target="_blank" rel="noopener">🏛️ Administración →</a>
   </div>
 
   <div class="intro">
@@ -221,8 +221,8 @@ const data = [
 
 const cats = {
   consulta:      { label: "Consulta",           bg: "#E6F1FB", fg: "#042C53", dot: "#185FA5", border: "#378ADD" },
-  prestamo:      { label: "Préstamo",           bg: "#E1F5EE", fg: "#04342C", dot: "#0F6E56", border: "#1D9E75" },
   plazos:        { label: "Seguimiento y refrendos", bg: "#FAEEDA", fg: "#412402", dot: "#854F0B", border: "#BA7517" },
+  prestamo:      { label: "Préstamo",           bg: "#E1F5EE", fg: "#04342C", dot: "#0F6E56", border: "#1D9E75" },
   documental:    { label: "Gestión documental avanzada", bg: "#EEEDFE", fg: "#26215C", dot: "#534AB7", border: "#7F77DD" },
   valoracion:    { label: "Valoración",         bg: "#FAECE7", fg: "#4A1B0C", dot: "#993C1D", border: "#D85A30" },
   transferencia: { label: "Transferencias",     bg: "#FBEAF0", fg: "#4B1528", dot: "#993556", border: "#D4537E" },
