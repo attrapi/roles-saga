@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal Subdirección de Archivos · ATTRAPI</title>
+<title>SA</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect x='8' y='14' width='48' height='40' rx='3' fill='%23691c32'/><rect x='12' y='18' width='40' height='32' rx='2' fill='%238B2A44'/><rect x='22' y='8' width='20' height='10' rx='2' fill='%23691c32'/><rect x='18' y='28' width='28' height='4' rx='1' fill='%23F5E6EA'/><rect x='18' y='35' width='20' height='3' rx='1' fill='%23F5E6EA' opacity='0.6'/><rect x='18' y='41' width='24' height='3' rx='1' fill='%23F5E6EA' opacity='0.4'/></svg>">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -135,7 +135,7 @@
   <header>
     <div class="header-left">
       <div class="header-top">
-        <div class="logo">S</div>
+        <div class="logo">SA</div>
         <div>
           <div class="kicker">Dirección de Procesos Administrativos de Construcción</div>
           <h1>Subdirección de Archivos</h1>
@@ -172,7 +172,7 @@
   <div class="results-count" id="results-count"></div>
   <div id="cards"></div>
   <div id="empty">No se encontraron resultados.</div>
-  <footer>Subdirección de Archivos · ATTRAPI<br>Última actualización: abril 2026</footer>
+  <footer>Subdirección de Archivos · ATTRAPI<br><span id="footer-date">Cargando fecha…</span></footer>
 </div>
 
 <div class="modal-backdrop" id="modal-detail">
@@ -530,6 +530,17 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") document.que
 
 renderFilters();
 render();
+
+function updateFooterDate() {
+  const el = document.getElementById("footer-date");
+  if (!el) return;
+  const now = new Date();
+  const fecha = now.toLocaleDateString("es-MX", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
+  const hora = now.toLocaleTimeString("es-MX", { hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false });
+  el.textContent = fecha.charAt(0).toUpperCase() + fecha.slice(1) + " · " + hora;
+}
+updateFooterDate();
+setInterval(updateFooterDate, 1000);
 </script>
 </body>
 </html>
